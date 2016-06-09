@@ -1,6 +1,6 @@
 {
   "name": "barepack",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Typescript+React+Redux+Webpack boilerplate",
   "main": "index.js",
   "scripts": {
@@ -8,13 +8,34 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sbuggay/barepack.git"
+  },
   "dependencies": {
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "typescript": "^1.8.10",
-    "webpack": "^1.13.1"
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10"
   },
   "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "express": "^4.13.4",
+    "react-redux": "^4.4.5",
+    "react-transform-catch-errors": "^1.0.2",
+    "react-transform-hmr": "^1.0.4",
+    "redbox-react": "^1.2.6",
+    "rimraf": "^2.5.2",
+    "tslint": "^3.11.0",
+    "tslint-loader": "^2.1.4",
+    "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
   }
