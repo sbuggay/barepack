@@ -11,12 +11,18 @@ module.exports = {
     preLoaders: [{
       test: /\.tsx?$/,
       loader: 'tslint',
-      include: APP_DIR
+      include: APP_DIR,
+      exclude: [
+        /typings/
+      ]
     }],
     loaders: [{
       test: /\.tsx?$/,
       loaders: ['babel', 'ts'],
-      include: APP_DIR
+      include: APP_DIR,
+      exclude: [
+        /typings/
+      ]
     }]
   },
   output: {

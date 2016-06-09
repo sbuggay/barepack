@@ -1,14 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "target": "ES6",
     "sourceMap": true,
     "module": "commonjs",
     "outDir": "./static/",
     "jsx": "react"
   },
-  "files": [
-    "./typings/index.d.ts",
-    "./app/index.tsx",
-    "./app/components/App.tsx"
+  "exclude": [
+    "node_modules"
   ]
 }
