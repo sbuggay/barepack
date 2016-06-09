@@ -1,16 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "outDir": "static/",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "declaration": true,
-    "noImplicitAny": true,
-    "removeComments": true,
-    "sourceMap": true,
-    "newLine": "LF"
+    "target": "ES6",
+    "outDir": "public/"
   },
   "files": [
-    "typings/index.d.ts"
+    "./typings/index.d.ts"
   ]
 }
