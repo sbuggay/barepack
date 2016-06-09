@@ -6,9 +6,13 @@ import configureStore from './stores/store'
 import App from './components/App'
 
 // Configure store
-let store = configureStore()
+let store = configureStore({
+    todos: [{id: 0, text: 'initial todo'}]
+})
 
 render(
-    <App/>,
+    <Provider store={store}>
+        <App/>
+    </Provider>,
     document.getElementById('app')
 )

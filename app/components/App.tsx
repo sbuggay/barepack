@@ -1,5 +1,8 @@
 import * as React from 'react'
-import TextInput from './TextInput'
+import { connect } from 'react-redux'
+
+import TodoInput from './TodoInput'
+import TodoList from './TodoList'
 
 class App extends React.Component<any, any> {
 
@@ -7,10 +10,17 @@ class App extends React.Component<any, any> {
         return (
             <div>
                 <h1>contacts-module</h1>
-                <TextInput/>
+                <TodoInput dispatch={this.props.dispatch}/>
+                <TodoList todos={this.props.todos}/>
             </div>
         )
     }
 }
 
-export default App
+// Map state to props
+// Is this required top level? What does this do?
+function mapStateToProps(state: any) {
+    return state
+}
+
+export default connect(mapStateToProps)(App)

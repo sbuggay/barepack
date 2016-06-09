@@ -1,5 +1,7 @@
+
+
 var actions = {
-    addTodo(text: string) {
+    addTodo: function(text: string) {
         return {
             type: 'ADD_TODO',
             text: text
