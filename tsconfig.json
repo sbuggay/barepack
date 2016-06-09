@@ -1,9 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "outDir": "public/"
+    "target": "ES5",
+    "sourceMap": true,
+    "module": "commonjs",
+    "outDir": "./static/",
+    "jsx": "react"
   },
   "files": [
-    "./typings/index.d.ts"
+    "./typings/index.d.ts",
+    "./app/index.tsx",
+    "./app/components/App.tsx"
   ]
 }

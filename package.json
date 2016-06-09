@@ -4,7 +4,8 @@
   "description": "Typescript+React+Redux+Webpack boilerplate",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -33,6 +34,7 @@
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.6",
     "rimraf": "^2.5.2",
+    "source-map-loader": "^0.1.5",
     "tslint": "^3.11.0",
     "tslint-loader": "^2.1.4",
     "webpack": "^1.13.1",

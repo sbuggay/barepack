@@ -1,21 +1,21 @@
 var express = require('express');
 var path = require('path');
-var config = require('config/webpack.config.js');
+var config = require('./config/webpack.config.js');
 var webpack = require('webpack');
 var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpackHotMiddleware = require('webpack-hot-middleware');
 
 var app = express();
 
-var compiler = webpack(config);
+var webpackConfig = webpack(config);
 
-app.use(webpackDevMiddleware(compiler, {noInfo: true, publicPath: config.output.publicPath}));
-app.use(webpackHotMiddleware(compiler));
+app.use(webpackDevMiddleware(webpackConfig, {noInfo: false, publicPath: config.output.publicPath}));
+app.use(webpackHotMiddleware(webpackConfig));
 
 app.use(express.static('./static'));
 
 app.use('/', function (req, res) {
-    res.sendFile(path.resolve('public/index.html'));
+    res.sendFile(path.resolve('./static/index.html'));
 });
 
 var port = 3000;

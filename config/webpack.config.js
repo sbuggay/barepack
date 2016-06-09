@@ -4,9 +4,9 @@ var path = require('path');
 var APP_DIR = path.join(__dirname, '..', 'app');
 
 module.exports = {
-  debug: true,
-  devtool: 'eval',
-  entry: ['webpack-hot-middleware/client', '../app/index.ts'],
+  // debug: true,
+  devtool: 'source-map',
+  entry: ['webpack-hot-middleware/client', './app/index.tsx'],
   module: {
     preLoaders: [{
       test: /\.tsx?$/,
@@ -20,9 +20,9 @@ module.exports = {
     }]
   },
   output: {
-    filename: 'app.js',
-    path: path.join(__dirname, '..', 'build'),
-    publicPath: '/static/'
+    filename: 'bundle.js',
+    path: path.join(__dirname, '..', 'static'),
+    publicPath: '/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
