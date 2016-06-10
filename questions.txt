@@ -7,3 +7,4 @@ Layout of action definitions in TS
 Semicolons in .tslint
 Better explanation of how reducers change state efficiently. 
     Is cloning the entire state with only the change really the best way?
+Stores initial state

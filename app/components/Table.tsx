@@ -1,8 +1,13 @@
 import * as React from 'react'
+import { connect } from 'react-redux'
 
-import ContactRow from './ContactRow'
+import TableRow from './TableRow'
 
-class ContactTable extends React.Component<any, any> {
+interface TableProps {
+    contacts: any
+}
+
+class Table extends React.Component<TableProps, any> {
 
     render() {
         return (
@@ -18,7 +23,7 @@ class ContactTable extends React.Component<any, any> {
                 <tbody>
                     {
                         this.props.contacts.map((contact, i) => {
-                            return <ContactRow key={i}/>
+                            return <TableRow key={i} contact={contact}/>
                         })
                     }
                 </tbody>
@@ -27,4 +32,8 @@ class ContactTable extends React.Component<any, any> {
     }
 }
 
-export default ContactTable
+function mapStateToProps(state) {
+    return { contacts: state.contacts}
+}
+
+export default connect(mapStateToProps)(Table)

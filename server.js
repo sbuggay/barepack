@@ -9,7 +9,7 @@ var app = express();
 
 var webpackConfig = webpack(config);
 
-app.use(webpackDevMiddleware(webpackConfig, {noInfo: false, publicPath: config.output.publicPath}));
+app.use(webpackDevMiddleware(webpackConfig, { noInfo: false, publicPath: config.output.publicPath }));
 app.use(webpackHotMiddleware(webpackConfig));
 
 app.use(express.static('./app'));
@@ -20,7 +20,7 @@ app.use('/', function (req, res) {
 
 var port = 3000;
 
-app.listen(port, function(error) {
-  if (error) throw error;
-  console.log("Express server listening on port", port);
+app.listen(port, function (error) {
+    if (error) throw error;
+    console.log("Express server listening on port", port);
 });

@@ -1,11 +1,11 @@
 import * as React from 'react'
 
-class ContactRow extends React.Component<any, any> {
+class TableRow extends React.Component<any, any> {
 
     render() {
         return (
             <tr>
-                <td>name1</td>
+                <td>{this.props.contact.name}</td>
                 <td>email1</td>
                 <td>info1</td>
                 <td>info2</td>
@@ -14,4 +14,5 @@ class ContactRow extends React.Component<any, any> {
     }
 }
 
-export default ContactRow
+
+export default TableRow
