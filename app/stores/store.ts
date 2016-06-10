@@ -4,7 +4,8 @@ import reducer from '../reducers/reducer'
 
 // Middleware goes here?
 
-var configureStore = function(initialState = {contacts: []}) {
+// Does initial state need to be set like this?
+var configureStore = function(initialState = {CRMContacts: [], OutlookContacts: []}) {
     return createStore(reducer, initialState)
 }
 
