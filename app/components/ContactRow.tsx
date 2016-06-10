@@ -1,8 +1,6 @@
 import * as React from 'react'
 
-import ContactItem from './ContactItem'
-
-class ContactList extends React.Component<any, any> {
+class ContactRow extends React.Component<any, any> {
 
     render() {
         return (
@@ -16,4 +14,4 @@ class ContactList extends React.Component<any, any> {
     }
 }
 
-export default ContactList
+export default ContactRow

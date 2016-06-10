@@ -1,14 +1,8 @@
 var actions = {
-    addTodo: function(text: string) {
+    switchContacts: function(contactType: string) {
         return {
-            type: 'ADD_TODO',
-            text: text
-        }
-    },
-    toggleTodo: function(id: number) {
-        return {
-            type: 'TOGGLE_TODO',
-            id: id
+            type: 'SWITCH_CONTACTS',
+            contactType: contactType
         }
     }
 }
