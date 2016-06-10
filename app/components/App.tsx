@@ -2,8 +2,7 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import TodoInput from './TodoInput'
-import TodoList from './TodoList'
+import ContactTable from './ContactTable'
 
 import actions from '../actions/actions'
 
@@ -12,8 +11,7 @@ class App extends React.Component<any, any> {
     render() {
         return (
             <div>
-                <TodoInput dispatch={this.props.dispatch}/>
-                <TodoList actions={actions} todos={this.props.todos}/>
+                <ContactTable/>
             </div>
         )
     }
