@@ -12,10 +12,10 @@ var webpackConfig = webpack(config);
 app.use(webpackDevMiddleware(webpackConfig, {noInfo: false, publicPath: config.output.publicPath}));
 app.use(webpackHotMiddleware(webpackConfig));
 
-app.use(express.static('./static'));
+app.use(express.static('./app'));
 
 app.use('/', function (req, res) {
-    res.sendFile(path.resolve('./static/index.html'));
+    res.sendFile(path.resolve('./app/index.html'));
 });
 
 var port = 3000;

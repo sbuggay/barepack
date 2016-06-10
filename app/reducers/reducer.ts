@@ -15,6 +15,14 @@ var reducer = function(state, action) {
                 }, ...state.todos]
             })
 
+
+        case 'TOGGLE_TODO':
+            return state.todos.map((todo) => {
+                return todo.id === action.id ?
+                    Object.assign({}, todo, {completed: !todo.completed}) : todo
+            })
+
+
         default:
             return state
     }

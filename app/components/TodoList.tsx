@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import TodoItem from './TodoItem'
+
 class TodoList extends React.Component<any, any> {
 
     render() {
@@ -7,13 +9,12 @@ class TodoList extends React.Component<any, any> {
             <ul>
                 {
                     this.props.todos.map((todo) => {
-                        return <li key={todo.id}>{todo.text}</li>
+                        return <TodoItem key={todo.id} actions={this.props.actions} todo={todo}/>
                     })
                 }
             </ul>
         )
     }
-
 }
 
 export default TodoList

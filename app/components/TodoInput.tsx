@@ -19,6 +19,10 @@ class TodoInput extends React.Component<any, any> {
 
     handleSubmit(event) {
         this.props.dispatch(actions.addTodo(this.state.inputText))
+        this.setState({
+            inputText: ''
+        })
+        return false
     }
 
     render() {
@@ -28,8 +32,9 @@ class TodoInput extends React.Component<any, any> {
                     type="text"
                     value={this.state.inputText}
                     onChange={this.handleChange.bind(this)}
+                    on={this.handleSubmit.bind(this)}
                 />
-                <button onClick={this.handleSubmit.bind(this)}>Submit</button>
+                <button onClick={this.handleSubmit.bind(this)} type="submit">Submit</button>
             </div>
         )
     }

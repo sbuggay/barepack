@@ -3,7 +3,7 @@
     "target": "ES6",
     "sourceMap": true,
     "module": "commonjs",
-    "outDir": "./static/",
+    "outDir": "./app/",
     "jsx": "react"
   },
   "exclude": [

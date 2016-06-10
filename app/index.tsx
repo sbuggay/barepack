@@ -7,7 +7,7 @@ import App from './components/App'
 
 // Configure store
 let store = configureStore({
-    todos: [{id: 0, text: 'initial todo'}]
+    todos: [{id: 0, text: 'initial todo', completed: false}]
 })
 
 render(
