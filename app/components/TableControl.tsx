@@ -1,8 +1,14 @@
 import * as React from 'react'
 
+import { connect } from 'react-redux'
+
+import { bindActionCreators } from 'redux'
+
+import switchContacts from '../actions/actions'
 
 interface TableControlProps {
-    // handleChangeContacts: Function
+    switchContacts: Function
+    contactsType: string
 }
 
 class TableControl extends React.Component<TableControlProps, any> {
@@ -17,5 +23,16 @@ class TableControl extends React.Component<TableControlProps, any> {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        contactsType: state.contactsType
+    }
+}
 
-export default TableControl
+const mapDispatchToProps = (dispatch) => {
+    return {
+        switchContacts: () => dispatch(switchContacts)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TableControl)
