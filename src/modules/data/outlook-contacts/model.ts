@@ -1,5 +1,5 @@
 export type OutlookContact = {
     name: string,
-    email: string
+    email: string,
     number: string
 }

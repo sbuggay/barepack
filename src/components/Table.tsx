@@ -21,11 +21,7 @@ class Table extends React.Component<TableProps, any> {
                     </tr>
                 </thead>
                 <tbody>
-                    {
-                        this.props.contacts.map((contact, i) => {
-                            return <TableRow key={i} contact={contact}/>
-                        })
-                    }
+
                 </tbody>
             </table>
         );

@@ -1,41 +1,37 @@
 var webpack = require('webpack');
 var path = require('path');
 
-var APP_DIR = path.join(__dirname, '..', 'app');
-
-module.exports = {
-  // debug: true,
-  devtool: 'source-map',
-  entry: ['webpack-hot-middleware/client', './app/index.tsx'],
+var config = {
+  // entry: ['webpack-hot-middleware/client', './src/index.tsx'],
+  entry: './src/index.tsx',
   module: {
     preLoaders: [{
       test: /\.tsx?$/,
-      loader: 'tslint',
-      include: APP_DIR,
-      exclude: [
-        /typings/
-      ]
+      loaders: ['babel']
     }],
     loaders: [{
       test: /\.tsx?$/,
-      loaders: ['babel', 'ts'],
-      include: APP_DIR,
+      loaders: ['babel', 'ts-loader', 'react'],
+      include: './src',
       exclude: [
-        /typings/
+        /typings/,
+        /node_modules/
       ]
     }]
   },
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, '..', 'app'),
+    path: path.join(__dirname, 'dist'),
     publicPath: '/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
   resolve: {
-    root: [path.resolve('../app')],
+    root: [path.resolve('./src')],
     extensions: ['', '.jsx', '.js', '.tsx', '.ts']
   }
 };
+
+module.exports = config;

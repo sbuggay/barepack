@@ -1,13 +1,9 @@
-import * as React from 'react'
-import { bindActionCreators } from 'redux'
+import * as React from 'react';
 
-import TabControl from './TabControl'
-import TableContainer from './TableContainer'
-
-import actions from '../actions/actions'
+import TabControl from './TabControl';
+import TableContainer from './TableContainer';
 
 class App extends React.Component<any, any> {
-
     render() {
         return (
             <div>

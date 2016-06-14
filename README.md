@@ -1,5 +1,7 @@
 # barepack
 A boilerplate project for typescript, react, redux, and webpack.
+
+## Getting Started
 #### Install Dependencies
 ```
 npm install

@@ -1,13 +1,9 @@
 import * as React from 'react'
-
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { bindActionCreators } from 'redux'
-
-import switchContacts from '../actions/actions'
-
 interface TableControlProps {
-    switchContacts: Function
+    switchContacts: Function,
     contactsType: string
 }
 
@@ -29,10 +25,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        switchContacts: () => dispatch(switchContacts)
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(TableControl)
+export default connect(mapStateToProps)(TableControl)
