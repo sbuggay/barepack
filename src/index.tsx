@@ -15,21 +15,22 @@ import ContactsPage from './routes/contacts/ContactsPage';
 import Route2Page from './routes/route2/Route2Page';
 import Route3Page from './routes/route3/Route3Page';
 
-require('index.html');
-
 import App from './components/App';
 
+// Combine all reducers
 const reducer = combineReducers({
     reducers,
     routing: routerReducer
 });
 
+// Create devtools
 const DevTools = createDevTools(
     <DockMonitor toggleVisibilityKey="ctrl-h" changePositionKey="ctrl-q">
         <LogMonitor theme="tomorrow" preserveScrollTop={false}/>
     </DockMonitor>
 );
 
+// Create store
 const store = createStore(
     reducer,
     DevTools.instrument()

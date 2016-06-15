@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon src/server/server.js"
+    "serve": "nodemon src/server/server.js",
+    "build": "webpack -p --config ./config/webpack.config.js"
   },
   "author": "",
   "license": "ISC",

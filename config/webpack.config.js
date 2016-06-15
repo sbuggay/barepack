@@ -21,7 +21,7 @@ var config = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '../dist'),
     publicPath: '/'
   },
   plugins: [
