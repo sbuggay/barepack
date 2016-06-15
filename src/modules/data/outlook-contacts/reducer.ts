@@ -2,7 +2,7 @@ import * as actionTypes from './actionTypes';
 
 const initialState = [];
 
-export default function outlook(state = initialState, { type, payload}) {
+export default function (state = initialState, { type, payload}) {
     switch (type) {
         case actionTypes.OUTLOOK_CONTACTS_LOAD_REQUEST:
             return state;

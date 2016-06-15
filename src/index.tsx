@@ -6,10 +6,16 @@ import * as React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 
 import * as reducers from './reducers/rootReducer';
+
+import ContactsPage from './routes/contacts/ContactsPage';
+import Route2Page from './routes/route2/Route2Page';
+import Route3Page from './routes/route3/Route3Page';
+
+require('index.html');
 
 import App from './components/App';
 
@@ -36,7 +42,9 @@ render(
         <div>
             <Router history={history}>
                 <Route path="/" component={App}>
-                
+                    <IndexRoute component={ContactsPage}/>
+                    <Route path="route2" component={Route2Page}/>
+                    <Route path="route3" component={Route3Page}/>
                 </Route>
             </Router>
             <DevTools />

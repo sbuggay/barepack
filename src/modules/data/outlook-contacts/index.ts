@@ -1,3 +1,2 @@
 export * from './actionTypes';
-
-export { reducer } from './reducer';
+export * from './actions';

@@ -8,7 +8,7 @@ class App extends React.Component<any, any> {
         return (
             <div>
                 <TabControl/>
-
+                {this.props.children}
             </div>
         );
     }
