@@ -8,7 +8,7 @@ class ContactsPage extends React.Component<ContactsPageProps, any> {
     render() {
         return (
             <div>
-                ContactsPage info
+                Contacts Page info
             </div>
         );
     }

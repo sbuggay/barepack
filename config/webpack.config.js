@@ -2,8 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 var config = {
-  // entry: ['webpack-hot-middleware/client', './src/index.tsx'],
-  entry: './src/index.tsx',
+  entry: ['webpack-hot-middleware/client', './src/index.tsx'],
   module: {
     preLoaders: [{
       test: /\.tsx?$/,
@@ -15,7 +14,8 @@ var config = {
       include: './src',
       exclude: [
         /typings/,
-        /node_modules/
+        /node_modules/,
+        /dist/
       ]
     }]
   },
