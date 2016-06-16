@@ -11,15 +11,24 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 
 import * as reducers from './reducers/rootReducer';
 
+import contacts from './modules/client/contacts/reducer';
+// import crm_contacts from './modules/data/crm-contacts/reducer';
+import outlookContacts from './modules/data/outlook-contacts/reducer';
+
 import ContactsPage from './routes/contacts/ContactsPage';
 import Route2Page from './routes/route2/Route2Page';
 import Route3Page from './routes/route3/Route3Page';
 
 import App from './components/App';
 
+var importedReducers = [
+    contacts,
+    outlookContacts
+]
+
 // Combine all reducers
 const reducer = combineReducers({
-    reducers,
+    contacts,
     routing: routerReducer
 });
 
