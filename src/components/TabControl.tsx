@@ -1,22 +1,23 @@
 import * as React from 'react'
 import { Link } from 'react-router';
 
-interface TabControl {
+import TabControlItem from './TabControlItem';
+
+interface TabControlProps {
 }
 
-class Table extends React.Component<TabControl, any> {
+class TabControl extends React.Component<TabControlProps, any> {
 
     render() {
         return (
             <div>
-                <Link to="/">Contacts</Link>{' '}
-                <Link to="/route2">Route 2</Link>{' '}
-                <Link to="/route3">Route 3</Link>
+                <TabControlItem to="/" text="Contacts"/>{' '}
+                <TabControlItem to="/route2" text="Route2"/>{' '}
+                <TabControlItem to="/route3" text="Route3"/>
                 <hr/>
             </div>
         );
     }
 }
 
-
-export default Table
+export default TabControl;

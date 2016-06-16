@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 import TableRow from './TableRow'
 
 interface TableProps {
-    contacts: any
+    contacts: any,
+    columns: Array<string>
 }
 
 class Table extends React.Component<TableProps, any> {
@@ -14,10 +15,9 @@ class Table extends React.Component<TableProps, any> {
             <table style={{border: 1}}>
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Info1</th>
-                        <th>Info2</th>
+                        {this.props.contacts.metadata.map(function(col, i) {
+                            return <th key={i}>{col}</th>
+                        })}
                     </tr>
                 </thead>
                 <tbody>

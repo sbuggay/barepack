@@ -3,15 +3,15 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 interface TableControlProps {
-    switchContacts: Function,
-    contactsType: string
+    contactsType: string,
+    switchContacts: Function
 }
 
 class TableControl extends React.Component<TableControlProps, any> {
 
     render() {
         return (
-            <select>
+            <select onChange={e => this.props.switchContacts(e)}>
                 <option value="outlook">Outlook Contacts</option>
                 <option value="crm">CRM Contacts</option>
             </select>
@@ -25,4 +25,10 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(TableControl)
+const mapDispatchToProps = (dispatch) => {
+    switchContacts: (e) => {
+        dispatch({type: 'CHANGE_CONTACTS_TYPE', payload: e})
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TableControl)

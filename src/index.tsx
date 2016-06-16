@@ -36,6 +36,8 @@ const store = createStore(
     DevTools.instrument()
 );
 
+console.log(store);
+
 const history = syncHistoryWithStore(browserHistory, store);
 
 render(
@@ -48,7 +50,7 @@ render(
                     <Route path="route3" component={Route3Page}/>
                 </Route>
             </Router>
-            <DevTools />
+            <DevTools/>
         </div>
     </Provider>,
     document.getElementById('app')
